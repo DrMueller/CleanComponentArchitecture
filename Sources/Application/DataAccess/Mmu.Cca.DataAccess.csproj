@@ -1,0 +1,28 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+		<PropertyGroup>
+			<TargetFramework>net5.0</TargetFramework>
+			<Features>IOperation</Features>
+			<CodeAnalysisRuleSet>..\..\..\CA_ProductionCode.ruleset</CodeAnalysisRuleSet>
+			<AnalysisMode>AllEnabledByDefault</AnalysisMode>
+		</PropertyGroup>
+
+		<ItemGroup>
+		  <ProjectReference Include="..\Bc.Common\Mmu.Cca.Bc.Shared.csproj" />
+		  <ProjectReference Include="..\Bc.Individuals\Mmu.Cca.Bc.Individuals.csproj" />
+		  <ProjectReference Include="..\Bc.Organisations\Mmu.Cca.Bc.Organisations.csproj" />
+		  <ProjectReference Include="..\CrossCutting\Mmu.Cca.CrossCutting.csproj" />
+		</ItemGroup>
+
+		<ItemGroup>
+		  <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="5.0.9">
+		    <PrivateAssets>all</PrivateAssets>
+		    <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+		  </PackageReference>
+		  <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="5.0.9" />
+		  <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="5.0.9">
+		    <PrivateAssets>all</PrivateAssets>
+		    <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+		  </PackageReference>
+		</ItemGroup>
+</Project>

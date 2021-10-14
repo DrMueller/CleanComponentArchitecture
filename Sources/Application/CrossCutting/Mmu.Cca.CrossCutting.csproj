@@ -1,0 +1,33 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+		<PropertyGroup>
+			<TargetFramework>net5.0</TargetFramework>
+			<Features>IOperation</Features>
+			<CodeAnalysisRuleSet>..\..\..\CA_ProductionCode.ruleset</CodeAnalysisRuleSet>
+			<AnalysisMode>AllEnabledByDefault</AnalysisMode>
+		</PropertyGroup>
+
+		<ItemGroup>
+		  <None Remove="appsettings.json" />
+		</ItemGroup>
+
+		<ItemGroup>
+		  <Content Include="appsettings.json">
+		    <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		  </Content>
+		</ItemGroup>
+
+		<ItemGroup>
+		  <PackageReference Include="JetBrains.Annotations" Version="2021.2.0" />
+		  <PackageReference Include="Lamar" Version="6.0.0" />
+		  <PackageReference Include="Microsoft.Extensions.Options" Version="5.0.0" />
+		  <PackageReference Include="NLog" Version="4.7.11" />
+		</ItemGroup>
+
+		<ItemGroup>
+		  <None Update="Nlog.config">
+		    <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		  </None>
+		</ItemGroup>
+
+</Project>
